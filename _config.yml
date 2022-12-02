@@ -2,9 +2,9 @@
 markdown: kramdown
 
 # URL of the Site
-url: 'woojinw0rld.github.io'
+url:
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: woojinw0rld.github.io
+baseurl:
 
 # Title of the Site
 title: Song Woojin
@@ -32,7 +32,7 @@ github_username:  woojinw0rld
 #나중에 등록
 
 # Google Analytics
-#google-analytics: UA-163806439-1
+google-analytics: UA-163806439-1
 
 # Disqus
 disqus-shortname: thedevslot
