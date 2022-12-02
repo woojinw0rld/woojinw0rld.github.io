@@ -59,7 +59,7 @@ permalink: "blog/:title"
 compress_html:
   clippings: all
 
-# Defaults
+# Defaults 메크로 값
 defaults:
   -
     scope:
