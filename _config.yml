@@ -1,90 +1,59 @@
-# WhatATheme
-markdown: kramdown
+# Setup
+title: 송우진의 블로그
+description: 공부 기록
+url: https://woojinw0rld.github.io
+avatar: /song.jpg
+paginate: 5
+permalink: pretty
+cover_image: /bg.jpeg
 
-# URL of the Site
-url: ''
-# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: 
-
-# Title of the Site
-title: 송우진 블로그
-# Description of the Site
-description: 송우진의 블로그
-# URL of Image of the Site
-site-image: /WhatATheme/assets/images/meta.jpg
-# Keywords of the Site
-site-keywords: Site, Template, Theme
-# URL for the Image of custom Favicon
-favicon-url: 
-
-# URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-
-# Social Media and Contact
-# If you don't want to use any icon, you can leave them blank.
-email: swj07090@naver.com
-instagram_username: woojinw0rld
-github_username:  woojinw0rld
-#spotify_username:
-
-# Google Analytics
-#google-analytics: UA-163806439-1
-
-# Disqus 디스커스 ..댓글달기
-#disqus-shortname: thedevslot
-
-# Name of the Author
-author-name: 우진
-# URL for the Image of the Author
-author-image: /author.jpg
-# 60 Words About the Author
-author-about: 21살 dd
-# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
-author-url: https://github.com/woojinw0rld
-
-# SASS
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Build settings
+# Gems
 plugins:
-  - jekyll-admin
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
 
-# Permalink
-permalink: "blog/:title"
-
-# Compress
-compress_html:
-  clippings: all
-
-# Defaults 메크로 값
-defaults:
-  -
-    scope:
-      type: 'posts'
-    values:
-      layout: post
-      post-image: ""
-      description: ""
-      tags:
-        - ""
-  -
-    scope:
-      type: 'pages'
-    values:
-      layout: page
-
-# Exclude
+# Optimize Jekyll
 exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
+  - .editorconfig
+  - .git
+  - .jekyll-cache
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - LICENSE.md
+  - README.md
+  - scripts/
+  - not-pure-poole.gemspec
+
+# Optimize Jekyl SEO Tag
+twitter:
+  username: woojinw0rld
+  card: summary
+logo: logo.png
+social:
+  name: songw0rldvolg
+  links:
+    - https://www.instagram.com/woojinw0rld/
+    - https://github.com/woojinw0rld/
+google_site_verification: xxxxx
+lang: en
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Options
+
+# Replace this value and uncomment to enable Google Analytics tracking
+# google_analytics: UA-000000-0
+
+# Replace this value and uncomment to enable Disqus
+# disqus: xxxxxx
+
+# Specify the author for blog posts
+author:
+  name: woojinw0rld
+  url: https://woojinw0rld.github.io
+  email: swj07090@naver.com
