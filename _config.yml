@@ -2,7 +2,7 @@
 markdown: kramdown
 
 # URL of the Site
-url:
+url: ''
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
 baseurl:
 
@@ -11,8 +11,7 @@ title: Song Woojin
 # Description of the Site
 description: WoojinWorld Vlog
 # URL of Image of the Site
-#첫 화면의 앞 배경
-site-image: /WhatATheme/assets/images/meta.jpg
+site-image: /URL_image.jpg
 # Keywords of the Site
 #화면 3분할
 site-keywords: Site, Template, Theme
@@ -21,7 +20,7 @@ favicon-url:
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
 #첫화면의 뒷배경
-heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+heroimage: /view_image.jpg
 
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
@@ -38,9 +37,9 @@ google-analytics: UA-163806439-1
 disqus-shortname: thedevslot
 
 # Name of the Author
-author-name: songwoojin
+author-name: SongWoojin
 # URL for the Image of the Author
-author-image: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+author-image: /My_image.jpg
 # 60 Words About the Author
 author-about: 송우진의 코딩공부__일일 기록
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
