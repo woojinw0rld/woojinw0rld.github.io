@@ -2,19 +2,16 @@
 title: 전산 언어II 프로젝트 및 발표
 layout: post
 post-image: 
-description: 이번에 구현해본 전산언어 프로젝트에 대해 
+description: 이번에 구현해본 전산언어 프로젝트에 대해. 이 프로젝트는 구조체와 메모리 동적할당, 
 tags:
 - 전산 언어 II
 ---
 
-# ㅂㅈㄷㄱ
-## ㅂㅈㄷㄱ
-### ㅂㅈㄷㄱ
+# 전산언어 II 
+## 피트니스 회원관리 프로그램
 
-- ㅂㅈㄷㄱ
-- ㅈㅂㄷㄱ
-  - ㅂㅈㄷㄱ
-    - ㅂㅈㄷㄱ
+
+- 
 
 1. ㅂㅈㄷㄱ
    1. ㅂㅈㄷㄱ
@@ -24,13 +21,6 @@ tags:
 |---|----|-----| 
 |송우진|21살| 인제대 |
 
-```java
-public class test{
-    public static void main(String[] args) {
-        
-    }
-}
-```
 
 ```cpp
 
