@@ -1,53 +1,50 @@
-# WhatATheme
+# woojinw0rld
 markdown: kramdown
 
 # URL of the Site
-url: ''
+url: 'woojinw0rld.github.io'
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: 
+baseurl: woojinw0rld.github.io
 
 # Title of the Site
-title: What A Theme
+title: Song Woojin
 # Description of the Site
-description: A customizable Jekyll portfolio theme
+description: WoojinWorld Vlog
 # URL of Image of the Site
+#첫 화면의 앞 배경
 site-image: /WhatATheme/assets/images/meta.jpg
 # Keywords of the Site
+#화면 3분할
 site-keywords: Site, Template, Theme
 # URL for the Image of custom Favicon
-favicon-url: 
+favicon-url:
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
+#첫화면의 뒷배경
 heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
-email: thedevslot@gmail.com
-facebook_username: thedevslot
-twitter_username: thedevslot
-instagram_username: thedevslot
-linkedin_username: thedevslot
-github_username:  thedevslot
-youtube_channel_id: UCk_93NXYP-U_AOB5GfWlOow
-reddit_username: /
-behance_username: /
-dribbble_username: /
-spotify_username: /
+email: swj07090@naver.com
+instagram_username: woojinw0rld
+github_username:  woojinw0rld
+#spotify_username: /
+#나중에 등록
 
 # Google Analytics
-google-analytics: UA-163806439-1
+#google-analytics: UA-163806439-1
 
 # Disqus
 disqus-shortname: thedevslot
 
 # Name of the Author
-author-name: TheDevsLot
+author-name: songwoojin
 # URL for the Image of the Author
 author-image: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
 # 60 Words About the Author
-author-about: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget pharetra velit, dapibus bibendum ex. Maecenas vitae laoreet mauris, ac luctus metus. Aliquam luctus velit vel ipsum feugiat, vel venenatis mauris hendrerit. Sed at vulputate sapien, eget vehicula dolor. Aliquam volutpat pulvinar neque sit amet sodales.
+author-about: 송우진의 코딩공부__일일 기록
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
-author-url: https://github.com/thedevslot
+author-url: https://github.com/woojinw0rld
 
 # SASS
 sass:
