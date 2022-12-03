@@ -1,29 +1,11 @@
 ---
-title: Test Page
+title: 블로그 소개
 layout: page
 ---
+# 송우진의 블로그
 
-# This is heading 1
-## This is heading 2
-### This is heading 3
-#### This is heading 4
-##### This is heading 5
-###### This is heading 6
+* cpp언어 공부
+* java언어 공부
 
-[This is a link](#)
-
-> This is a blockquote
-
-`This is code`
-
-### Bullet List
-* Item 1
-* Item 2
-* Item 3
-* Item 4
-
-### Number List
-1. Item 1
-2. Item 2
-3. Item 3
-4. Item 4
+---
+### cpp언어
