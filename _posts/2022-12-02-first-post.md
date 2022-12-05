@@ -47,11 +47,12 @@ tags:
 총 등록할 수 있는 회원의 수는 50명이다. 회원의 정보는 모두 구조체에 저장한다. 
 그리고 만약 락커룸(회원 코드)에 먼저 등록된 회원이 있다면 더 이상 등록이 되지 않게 설계하였다.
 
-
+회원 등록 함수이다.
 #### Cpp
 
 
 ```cpp
+void regis(Information* infor)
 {
 	int num1=0;
 
@@ -82,6 +83,36 @@ tags:
 
 두번째 do~while문을 이용하여 조건을 검사한다. 락커룸(회원코드)에 먼저 등록된 회원이 있는지 검사한다. 만약 먼저 등록된 회원이 있다면 락커룸번호부터 다시 입력해야 한다. 
 
+모든 조건을 통과하면 회원의 정보를 입력한다. 
+```css
+printf("<<%d번째 락커룸 회원성명>>: ", num1);
+	num1 -= 1;
+	getchar();
+
+	infor[num1].name = (char*)malloc(sizeof(char) * 20);
+	gets_s(infor[num1].name,sizeof(char)*20);
+
+	printf("<회원전화번호입력>: ");
+	infor[num1].num = (char*)malloc(sizeof(char) * 25);
+	gets_s(infor[num1].num, sizeof(char)*25);
+
+
+	printf("<회원주소입력>: ");
+	infor[num1].adr = (char*)malloc(sizeof(char) * 30);
+	gets_s(infor[num1].adr, sizeof(char)*30);
+	
+	
+	do {
+		printf("<회원생년입력(1900~2022)>: "); scanf_s("%d", &infor[num1].year);
+	} while (infor[num1].year < 1900 || infor[num1].year > 2022);
+	do {
+		printf("<회원생월입력(1월~12월)>: "); scanf_s("%d", &infor[num1].month);
+	} while (infor[num1].month < 1 || infor[num1].month > 12);
+	do {
+		printf("<회원생일입력(1일~31일)>: "); scanf_s("%d", &infor[num1].day);
+	} while (infor[num1].day < 1 || infor[num1].day > 31);
+	printf("-----회원 등록완료----- \n");
+```
 
 
 ### 등록된 회원 조회
