@@ -1,5 +1,5 @@
 ---
-title: 전산 언어II 프로젝트 및 발표
+title: 전산 언어II 프로젝트
 layout: post
 post-image: /cpp_fitness.jpg
 description: 이번에 구현해본 전산언어 프로젝트에 대해. 이 프로젝트는 구조체와 메모리 동적할당, 파일 입출력등의 기능등을 사용하였다. 
