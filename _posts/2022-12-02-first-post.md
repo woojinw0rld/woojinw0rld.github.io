@@ -84,7 +84,7 @@ void regis(Information* infor)
 두번째 do~while문을 이용하여 조건을 검사한다. 락커룸(회원코드)에 먼저 등록된 회원이 있는지 검사한다. 만약 먼저 등록된 회원이 있다면 락커룸번호부터 다시 입력해야 한다. 
 
 모든 조건을 통과하면 회원의 정보를 입력한다. 
-```css
+```cpp
 printf("<<%d번째 락커룸 회원성명>>: ", num1);
 	num1 -= 1;
 	getchar();
@@ -112,6 +112,7 @@ printf("<<%d번째 락커룸 회원성명>>: ", num1);
 		printf("<회원생일입력(1일~31일)>: "); scanf_s("%d", &infor[num1].day);
 	} while (infor[num1].day < 1 || infor[num1].day > 31);
 	printf("-----회원 등록완료----- \n");
+}
 ```
 
 
