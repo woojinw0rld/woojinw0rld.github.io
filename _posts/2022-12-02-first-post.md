@@ -186,6 +186,7 @@ void BDAY(Information* infor)
 	scanf_s("%d", &num3);
 	printf("%d월생은", num3);
 
+<<<<<<< HEAD
 	for (i = 0; i <= SIZE; i++)
 	{
 		if (num3 == infor[i].month)
@@ -193,6 +194,10 @@ void BDAY(Information* infor)
 			printf(" %s입니다. \n", infor[i].name);
 			printf("나이는 %d입니다. \n", (2022 - infor[i].year)+1);
 			check++;
+=======
+
+
+>>>>>>> bb3f489eec81c98090fad408c4dae643da5a814e
 
 		}
 	}
