@@ -186,7 +186,6 @@ void BDAY(Information* infor)
 	scanf_s("%d", &num3);
 	printf("%d월생은", num3);
 
-<<<<<<< HEAD
 	for (i = 0; i <= SIZE; i++)
 	{
 		if (num3 == infor[i].month)
@@ -194,18 +193,16 @@ void BDAY(Information* infor)
 			printf(" %s입니다. \n", infor[i].name);
 			printf("나이는 %d입니다. \n", (2022 - infor[i].year)+1);
 			check++;
-=======
-
-
->>>>>>> bb3f489eec81c98090fad408c4dae643da5a814e
 
 		}
 	}
+	
 	if (check == 0)
 	{
 		printf("없습니다.\n");
 	}
 }
+
 ```
 
 생일회원조회 함수 코드다. 먼저 몇월생을 조회할 것인지 입력한다. 입력한 값을 num3에 저장한다. 그리고 for문을 이용하여 모든 구조체에 접근한다.
