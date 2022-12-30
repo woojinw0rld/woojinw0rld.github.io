@@ -23,7 +23,7 @@ tags:
 4. [회원 정보 출력](#회원-정보-출력)
 5. [회원 탈퇴](#회원-탈퇴) 
 6. [파일 입출력](#파일-입출력)
-7. [메인함수와 다른함수](#메인함수-기능선택함수)
+7. [파일 분할](#파일-분할)
 
 ---
 ## 결론 
@@ -312,20 +312,79 @@ do~while로 값 경계 검사를 진행하였다. NULL로 초기화를 하였으
 ---
 ### 회원 탈퇴
 
-회원 탈퇴도 위와 같은 매커니즘이다. 메모리 동적할당이 되어 있기 때문에 할당해준 메모리를 풀어준 뒤 다시 NULL로 초기화 한다. 여기서는 간단하게 메모리 동적할당만 보고 가겠다. 
+회원 탈퇴도 회원 정보 조회와 같은 매커니즘이다. 
+
+메모리 동적할당이 되어 있기 때문에 할당해준 메모리를 풀어준 뒤 다시 NULL로 초기화 한다. 나머지 정수형 변수는 0으로 초기화 한다. 
+
+여기서는 간단하게 메모리 동적할당만 보고 가겠다. 
 
 ```cpp
 free(infor[i].name);
 free(infor[i].adr);
 free(infor[i].num);
-
 ```
 
 이런 식으로 할당된 메모리를 풀어준 뒤 초기화 해주면 된다. 
 
+---
 ### 파일 입출력
 
+현재 등록된 회원들의 정보를 파일에 저장한다. 필자는 .txt파일에 저장해 주었다. 
 
-### 메인함수, 기능선택함수
+>파일 입출력 코드 
+
+```cpp
+void Customer_list(Information* infor)
+{
+	int i, j;
+	char str[20];
+	FILE* fp;
+	printf("파일 입출력 선택!!\n");
+	fp = fopen("data.txt", "wt");
+	if (fp == NULL)
+	{
+		puts("파일 오픈 실패!");
+		system("pause");
+		return;
+	}
+	else
+	{
+		puts("파일 출력성공!");
+	}
+	for (i = 0; i < SIZE; i++)
+	{
+		if (infor[i].name != NULL)
+		{
+			fprintf(fp, "<<<<<<<<등록된 %d번째 회원>>>>>>>>>\n", i + 1);
+			fprintf(fp, "성함:%s\n", infor[i].name);
+			fprintf(fp, "주소:%s\n", infor[i].adr);
+			fprintf(fp, "전화번호:%s\n", infor[i].num);
+			fprintf(fp, "생년월일: %d년%d월%d일생\n", infor[i].year, infor[i].month, infor[i].day);
+		}
+	}
+	fclose(fp);
+}
+```
+data.txt파일에 저장해 줄 것이다. 파일을 쓰기 모드로 열어준다. if문을 활용하여 파일이 열리지 않았을 때를 대비한다. 
+
+for문과 if문을 활용하여 값을 비교후 fprintf를 활용하여 파일에 저장한다. 
+
+---
+### 파일 분할
+
+2개의 헤더파일과 2개의 cpp파일로 총 4개의 파일로 분할 하였다. 구조체와 함수 선언은 헤더 파일로 만들었다. main함수와 나머지 기능들의 코드는 cpp파일로 만들었다. 
 
 
+[소스.cpp](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2F%BC%D2%BD%BA.cpp)
+
+
+[funcion.cpp](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2Ffuncion.cpp)
+
+
+[struct.h](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2Fstruct.h)
+
+
+[funcion.h](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2Ffuncion.h)
+
+
+코드 들이다. 
