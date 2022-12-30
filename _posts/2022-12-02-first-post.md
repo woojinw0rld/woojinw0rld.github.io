@@ -363,15 +363,13 @@ void Customer_list(Information* infor)
 	fclose(fp);
 }
 ```
-data.txt파일에 저장해 줄 것이다. 파일을 쓰기 모드로 열어준다. if문을 활용하여 파일이 열리지 않았을 때를 대비한다. 
-
+data.txt파일에 저장해 줄 것이다. 파일을 쓰기 모드로 열어준다. if문을 활용하여 파일이 열리지 않았을 때를 대비한다.   
 for문과 if문을 활용하여 값을 비교후 fprintf를 활용하여 파일에 저장한다. 
 
 ---
 ### 파일 분할
 
-2개의 헤더파일과 2개의 cpp파일로 총 4개의 파일로 분할 하였다. 구조체와 함수 선언은 헤더 파일로 만들었다. main함수와 나머지 기능들의 코드는 cpp파일로 만들었다. 
-
-전체 코드 링크: <https://github.com/woojinw0rld/steady/tree/main/fitness.cpp>
+2개의 헤더파일과 2개의 cpp파일로 총 4개의 파일로 분할 하였다. 구조체와 함수 선언은 헤더 파일로 만들었다.    
+main함수와 나머지 기능들의 코드는 cpp파일로 만들었다. 
 
 [전체 코드 링크](https://github.com/woojinw0rld/steady/tree/main/fitness.cpp)
