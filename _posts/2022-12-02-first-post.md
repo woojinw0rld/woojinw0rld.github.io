@@ -373,16 +373,7 @@ for문과 if문을 활용하여 값을 비교후 fprintf를 활용하여 파일�
 2개의 헤더파일과 2개의 cpp파일로 총 4개의 파일로 분할 하였다. 구조체와 함수 선언은 헤더 파일로 만들었다. main함수와 나머지 기능들의 코드는 cpp파일로 만들었다. 
 
 
-[소스.cpp](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2F%BC%D2%BD%BA.cpp)
 
-
-[funcion.cpp](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2Ffuncion.cpp)
-
-
-[struct.h](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2Fstruct.h)
-
-
-[funcion.h](..%2F..%2F..%2F..%2FDesktop%2FProject1%2FProject1%2Ffuncion.h)
 
 
 코드 들이다. 
