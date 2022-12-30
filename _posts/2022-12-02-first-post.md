@@ -372,7 +372,4 @@ for문과 if문을 활용하여 값을 비교후 fprintf를 활용하여 파일�
 
 2개의 헤더파일과 2개의 cpp파일로 총 4개의 파일로 분할 하였다. 구조체와 함수 선언은 헤더 파일로 만들었다. main함수와 나머지 기능들의 코드는 cpp파일로 만들었다. 
 
-
-
-[피트니스 회원 관리시스템 코드](#https://github.com/woojinw0rld/steady/tree/main/fitness.cpp)
-
+전체 코드 링크: <https://github.com/woojinw0rld/steady/tree/main/fitness.cpp>
