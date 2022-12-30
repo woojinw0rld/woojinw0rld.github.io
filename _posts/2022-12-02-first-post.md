@@ -125,6 +125,7 @@ printf("<<%d번째 락커룸 회원성명>>: ", num1);
 
 그후 생년월일을 입력한다. 각각 do~while문을 이용해서 보는 것처럼 값 경계 검사를 실시하였다. 모두 입력하면 회원 등록이 성공한다.
 
+---
 
 ### 등록된 회원 조회
 
@@ -171,6 +172,7 @@ for문을 이용하여 먼저 모든 구조체배열을 출력하거나 비교�
 
 NULL이 아닐시 그 구조체에 저장된 성함이 출력된다. for문에 사용한 i를 이용하여 락커룸번호도 함께 출력된다. 그리고 5로 나눈 나머지가 0일때 줄 바꿈을 하도록 if문을 설계하였다. 
 
+---
 ### 생일 회원 조회
 
 생일 회원 조회기능을 선택하면 먼저 몇 월달의 생일을 회원을 조회 할 것인지 입력한다. 그 달에 생일인 회원이 있다면, 회원의 성함과 나이가 함께 출력된다. 
@@ -212,7 +214,7 @@ void BDAY(Information* infor)
 
 if문을 이용하여 num3값과 구조체에 저장된 생월과의 값과 비교한다. 그 값이 동일하다면 그 회원의 성함, 나이가 출력된다. 후위증가인 check가 증가한다.
 만약 동일한 값이 없다면, check의 값이 증가하지 않아 if문이 실행된다. 생일을 입력할 때 do~while로 값 경계검사를 했으면 더 좋을 것 같다. 
-
+---
 
 ### 회원 정보 출력
 
@@ -223,14 +225,103 @@ if문을 이용하여 num3값과 구조체에 저장된 생월과의 값과 비�
 
 회원 코드로 조회를 선택하면 입력한 회원 코드에 회원이 등록되어 있따면 정보가 출력된다. 
 
+>회원정보출력 코드
 
+먼저 기능선택 코드이다. 
+```cpp
+void MemberINfor(Information* infor)
+{
+	int num3, i, num1 = 0;
+	char ch1[10];
+	printf("\n<<회원정보 출력을 선택하셨습니다.>> \n");
+	do
+	{
+		printf("<1. 성함으로 검색> 또는 <2. 회원코드로 검색>"); scanf_s("%d", &num3);
+		if (num3 > 2 || num3 < 1)
+		{
+			printf("다시 입력해주세요. \n");
+		}
+	} while (num3 > 2 || num3 < 1);
+```
 
+do~while을 이용하여 값 경계검사를 진행하였다. 
 
+1번 기능인 성함으로 검색기능이다. 
 
+```cpp
+if (num3 == 1)
+	{
+		getchar();
+		printf("성함을 입력하세요: ");
+		gets_s(ch1, sizeof(ch1));
+		for (i = 0; i < SIZE; i++)
+		{
+			if (infor[i].name != NULL && !strcmp(ch1, infor[i].name))
+			{
+				printf("\n락커룸넘버: [%d]\n", i + 1);
+				printf("성함: %s\n", infor[i].name);
+				printf("전화번호: %s\n", infor[i].num);
+				printf("주소: %s\n", infor[i].adr);
+				printf("생년월일: %d년 %d월 %d일\n", infor[i].year, infor[i].month, infor[i].day);
+				num1++;
+				break;
+			}
+		}
+		if (num1 == 0)
+		{
+			printf("%s회원이 존재하지 않습니다. \n", ch1);
+		}
+	}
+```
+먼저 getchar를 이용하여 입력버퍼를 비워주었다. strcmp를 이용하여 입력된 성함과 등록된 성함을 비교 후 같으면 참의 값이 반환되도록 not을 붙여 주었다. 
+그리고 만약 회원이 존재하지 않을 시 num1를 이용하여 카운트 후 if문이 실행되도록 설계하였다. 
 
+2번 기능인 회원코드로 검색이다.
 
+```cpp
+	else if (num3 == 2)
+	{
+		printf("회원코드를 입력하세요.[락커룸 넘버]\n");
+		do
+		{
+			printf("몇번째 락커룸:"); scanf_s("%d", &num1);
+			if (num1 < 0 || num1>50)
+			{
+				printf("다시입력해주세요. \n");
+			}
+		} while (num1 < 0 || num1>50);
+		printf("\n락커룸넘버: [%d]\n", num1);
+		num1 -= 1;
+		if (infor[num1].name == NULL)
+		{
+			printf("%d번라커룸은 빈 락커룸입니다. \n", num1 + 1);
+
+		}
+		else if (infor[num1].name != NULL)
+		{
+			printf("성함: %s\n", infor[num1].name);
+			printf("전화번호: %s\n", infor[num1].num);
+			printf("주소: %s\n", infor[num1].adr);
+			printf("생년월일: %d년 %d월 %d일\n", infor[num1].year, infor[num1].month, infor[num1].day);
+		}
+
+```
+
+do~while로 값 경계 검사를 진행하였다. NULL로 초기화를 하였으니, NULL과 비교한다. 등록된 락커룸이면 회원의 정보가 출력된다. 
+
+---
 ### 회원 탈퇴
 
+회원 탈퇴도 위와 같은 매커니즘이다. 메모리 동적할당이 되어 있기 때문에 할당해준 메모리를 풀어준 뒤 다시 NULL로 초기화 한다. 여기서는 간단하게 메모리 동적할당만 보고 가겠다. 
+
+```cpp
+free(infor[i].name);
+free(infor[i].adr);
+free(infor[i].num);
+
+```
+
+이런 식으로 할당된 메모리를 풀어준 뒤 초기화 해주면 된다. 
 
 ### 파일 입출력
 
