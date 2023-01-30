@@ -1,7 +1,7 @@
 ---
-title: Blog
+title: Javascript
 layout: blog
-post-image:
+post-image: none
 description: 
 tags:
 
